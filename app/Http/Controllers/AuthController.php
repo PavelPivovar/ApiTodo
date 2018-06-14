@@ -81,7 +81,8 @@ class AuthController extends Controller
         ]);
     }
 
-    public function payload(){
+    public function payload()
+    {
         return auth()->payload();
     }
 }

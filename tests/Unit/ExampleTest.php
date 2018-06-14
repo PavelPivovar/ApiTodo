@@ -12,8 +12,14 @@ class ExampleTest extends TestCase
      *
      * @return void
      */
-    public function testBasicTest()
+    public function test_post_method_and_status()
     {
-        $this->assertTrue(true);
+        $data = [
+            'title' => 'title',
+            'body' => 'body'
+        ];
+         $this->json('POST','api/task', $data)
+             ->assertStatus(201);
+        
     }
 }
